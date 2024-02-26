@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREEAPP</title>
+    <link rel="stylesheet" href="./css/apps.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="header__h1">FREEAPP</h1>
+            <ul class="header__ul">
+                <a href="" class="header__ul--a"></a><li class="header__ul--a-li">Massangers</li>
+                <a href="" class="header__ul--a"></a><li class="header__ul--a-li">Apps for coding</li>
+                <a href="" class="header__ul--a"></a><li class="header__ul--a-li">Games</li>
+            </ul>
+        </div>
+        <div class="cards"></div>
+        <div class="cards2"></div>
+        <div class="cards3"></div>
+        <template id="templateApp">
+            <div class="app-card">
+              <img class="appImage" src="" alt="App Image">
+              <h2 class="appName"></h2>
+              <p class="appDescr"></p>
+              <p class="appDownload"></p>
+              <a class="appLink"></a>
+            </div>
+          </template>        
+        <div id="nebulaBackdrop"></div>
+<div id="forest"></div>
+<div id="star"></div>
+<div id="comet"></div>
+<div id="ufo">🛸</div>
+<svg id="filters" width="0" height="0">
+  <filter id="distort">
+    <feMorphology id="distortRadius" operator="erode" radius="1 1" in="SourceGraphic" result="morphology"/>
+  </filter>
+  <filter id="rocky">
+    <feTurbulence class="turbs" type="turbulence" baseFrequency=".02" numOctaves="10" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence1"/>
+    <feDiffuseLighting class="lighting" in='noise' lighting-color='' surfaceScale='5'>
+      <feDistantLight class="elevation" azimuth='210' elevation='75' />
+    </feDiffuseLighting>
+    <feComposite in="texture" in2="SourceGraphic" operator="in" />
+  </filter>
+  <filter id="rocky2">
+    <feTurbulence class="turbs" type="fractalNoise" baseFrequency='0.03 0.03' numOctaves="20" result='noise' />
+    <feDiffuseLighting class="lighting" in='noise' lighting-color='' surfaceScale='1'>
+      <feDistantLight class="elevation" azimuth='25' elevation='10' />
+    </feDiffuseLighting>
+    <feComposite in="texture" in2="SourceGraphic" operator="in" />
+  </filter>
+</svg>
+        </div>
+    <script src="./js/apps.js"></script>
+</body>
+</html>
